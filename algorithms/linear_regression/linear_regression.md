@@ -27,8 +27,13 @@ Linear regression relies on several key assumptions:
 4. **Model Training**: Fit the regression model to the training data.
 5. **Evaluation**: Evaluate the model's performance using metrics such as:
    - **Mean Absolute Error (MAE)**
+        - Measures the average absolute difference between the predicted values and the actual target value. (No suqaring the errors gives them all equal weight)
    - **Mean Squared Error (MSE)**
-   - **R-squared (\( R^2 \))**
+        - Calculates the average of the squared differences between the predicted values and the actual target values. Squaring the errors penalizes larger errors more heavily than smaller ones, making this metric sensitive to outliers. It is particularly useful when you want to emphasize larger errors in your evaluation.
+   - **Root Mean Squared Error (RSME)**
+        - Represents the square root of the Mean Squared Error. By taking the square root, the RMSE returns the error metric to the same units as the target variable, making it easier to interpret in the context of the original data. RMSE is also sensitive to outliers and emphasizes larger errors more strongly than MAE.
+   - **R-squared (R²)**
+        - Measures the proportion of the variance in the target variable that is explained by the model. It ranges from 0 to 1, where 1 indicates that the model explains all the variability in the target variable, and 0 indicates that it explains none. R² is a commonly used metric for understanding the goodness of fit of a regression model.
 
 ---
 
@@ -40,7 +45,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.metrics import mean_absolute_error, mean_squared_error, root_mean_squared_error, r2_score
 
 # Sample data
 data = pd.DataFrame({
@@ -62,6 +67,7 @@ y_pred = model.predict(X_test)
 
 # Evaluation
 print("Coefficients:", model.coef_)
-print("Intercept:", model.intercept_)
+print("MAE:", mean_absolute_error(y_test, y_pred))
 print("MSE:", mean_squared_error(y_test, y_pred))
+print("RMSE:", root_mean_squared_error(y_test, y_pred))
 print("R-squared:", r2_score(y_test, y_pred))
