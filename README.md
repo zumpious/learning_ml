@@ -15,3 +15,5 @@ The project is organized into directories, each representing a different machine
 ## Algorithms
 
 - **[Linear Regression](./algorithms/linear_regression/linear_regression.md)**:  describes a linear approach to modeling the relationship between a dependent variable and one or more independent variables.
+
+- **[Logistic Regression](./algorithms/logisitc_regression/logistic_regression.md)**:  
