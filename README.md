@@ -19,3 +19,5 @@ The project is organized into directories, each representing a different machine
 - **[Logistic Regression](./algorithms/logisitc_regression/logistic_regression.md)**: is a statistical method for analyzing datasets in which there are one or more independent variables that determine an outcome. The outcome is measured with a dichotomous variable (in which there are only two possible outcomes).
 
 - **[K-Nearest Neighbors](./algorithms/knn/knn.md)**: is describes an algorithm that classifies data points based on the majority class of their k nearest neighbors in the feature space, making it useful for both classification and regression tasks.
+
+- **[Decision Trees and Random Forest](./algorithms/decision_trees_and_random_forest/decision_trees_and_random_forest.md)**: are tree-based algorithms where decision trees make predictions by learning decision rules from features, while random forests combine multiple trees to create a more robust model for both classification and regression tasks.
