@@ -1,6 +1,6 @@
 # Bias-Variance Tradeoff
 
-The bias-variance tradeoff is a fundamental concept in machine learning that describes the tradeoff between two sources of error that affect the performance of predictive models. At a point where a more complex model only add noise, which decreases the train error, but increases test error (overfitting).
+The bias-variance tradeoff is a fundamental concept in machine learning that describes the tradeoff between two sources of error that affect the performance of predictive models. At a point where a more complex model only adds noise, which decreases the train error, but increases test error (overfitting).
 
 ## Bias (Verzerrung)
 
